@@ -12,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 @EnableAutoConfiguration
 public class Sample2Controller {
 
-    @Autowired
-    private RestTemplate restTemplate;
+
+    private RestTemplate restTemplate=new RestTemplate();
 
     @RequestMapping("/")
     @ResponseBody
