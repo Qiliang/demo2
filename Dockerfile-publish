@@ -1,0 +1,7 @@
+FROM openjdk:8
+
+COPY /project/target/demo2.jar  /home/app.jar
+
+WORKDIR /home/
+
+CMD java -jar app.jar
