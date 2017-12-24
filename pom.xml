@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <start-class>io.daocloud.demo2.SampleController</start-class>
+        <start-class>io.daocloud.demo2.Sample2Controller</start-class>
     </properties>
     <groupId>io.daocloud</groupId>
     <artifactId>demo2</artifactId>
