@@ -1,6 +1,6 @@
 package io.daocloud.demo2;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -13,12 +13,15 @@ import org.springframework.web.client.RestTemplate;
 public class Sample2Controller {
 
 
-    private RestTemplate restTemplate=new RestTemplate();
+    private RestTemplate restTemplate = new RestTemplate();
+
+    @Value("${PORT:30013}")
+    private String port;
 
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "from demo:" + restTemplate.getForObject("http://demo/", String.class);
+        return "from demo:" + restTemplate.getForObject("http://demo:" + port + "/", String.class);
     }
 
     public static void main(String[] args) throws Exception {
